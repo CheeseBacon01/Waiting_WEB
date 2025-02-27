@@ -5,7 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steam 特賣等候中...</title>
     <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #2a3a53;
+            color: #66c0f4;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
 
+        .container {
+            margin-top: 2em;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 30px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
 
         .logo {
             margin-top: 1em;
@@ -24,6 +41,52 @@
         .pic img{
             width: 300px;
             background-color: #2a3a53;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin: 20px 0;
+        }
+
+        .queue-info {
+            font-size: 18px;
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+        }
+
+        .loader {
+            border: 6px solid #2a475e;
+            border-top: 6px solid #66c0f4;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin: 20px auto;
+            animation: spin 1s linear infinite;
+        }
+
+        #fun-fact {
+            font-size: 16px;
+            margin-top: 20px;
+            color: #66c0f4;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: #66c0f4;
+            color: #000000;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: #3a9ad9;
         }
 
     </style>
