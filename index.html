@@ -124,12 +124,45 @@
 </div>
 
 <script>
+    let index=0;
+    let arr=[
+        "🎮 你知道嗎？Steam 的首次發布是在 2003 年 9 月 12 日。",
+        "🎮 Steam 原本沒有「特賣」機制！",
+        "🎮 Steam 曾推出過「每日特賣」，但已取消！",
+        "🎮 Steam 成立的第一年只有 7 款遊戲！",
+        "🎮 Steam 退款機制最早來自歐盟法律！",
+        "🎮 Steam 有個「無限金錢」Bug，被一名玩家發現！",
+    ];
 
+    function update(){
+        index=(index+1)%arr.length;
+        document.getElementById("fun-fact").textContent=arr[index];
+    }
+    setInterval(update,3000);
     button=document.querySelector("button");
     button.addEventListener("click",()=>{
         window.location.href="https://store.steampowered.com/";
     });
 
+    document.addEventListener("DOMContentLoaded", () => {
+        const queueNumberElement = document.querySelector(".queue-info p:nth-child(1) span");
+        const waitingTimeElement = document.querySelector(".queue-info p:nth-child(2) span");
+
+        const queueNumber = Math.floor(Math.random() * 91) + 10;
+        queueNumberElement.textContent = `#${queueNumber}`;
+
+        let waitingTime;
+        if (queueNumber <= 30) {
+            waitingTime = "5 minutes";
+        }
+        else if (queueNumber <= 60) {
+            waitingTime = "10 minutes";
+        }
+        else {
+            waitingTime = "15 minutes";
+        }
+        waitingTimeElement.textContent = waitingTime;
+    });
 </script>
 </body>
 </html>
